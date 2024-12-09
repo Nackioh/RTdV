@@ -1,0 +1,54 @@
+body{
+    padding:0px;
+    margin:0px;
+    height: 100vh;
+    background: rgb(255,193,2);
+    background: linear-gradient(335deg, rgba(255,193,2,1) 20%, rgba(254,91,0,1) 50%, rgba(254,72,0,1) 100%);
+
+}
+
+@font-face {
+    font-family: 'Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      local('https://nuevoamanecer.com.ar/rtdv/fonts/Gothic.ttf'),
+      url('https://nuevoamanecer.com.ar/rtdv/fonts/Gothic.ttf') format('truetype');
+  }
+
+header {
+    width:100%;
+    margin:0px;
+    padding:10px 0px;
+    background: no-repeat center/100% url(https://nuevoamanecer.com.ar/rtdv/img/fondo.png);
+    display: flex;
+    justify-content: center;
+    }
+   
+.contenedor {padding:0%;}
+
+h1,h2,h3{text-align: center;}
+h1{font-family:'Gothic';width: 100%;font-size:25px;font-weight:400;font-style:italic;margin:0 auto;padding:0%;color:#ffffff;margin-bottom:3%;}
+h2{font-family:'Gothic';width: 100%;font-size:25px;font-weight:700;font-style:italic;margin:0 auto;padding:0%;color:#ffffff;margin-bottom:5%;}
+h3{font-family:'Gothic';width: 100%;font-size:21px;font-weight:400;font-style:normal;margin:0 auto;padding:0%;color:#ffffff;margin-top:5%;margin-bottom:5%;}
+
+
+img{
+    max-width:100%;
+    height:auto;
+    border:0;
+    }
+    
+    a img {border: none;}
+
+article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.redes{
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    }
