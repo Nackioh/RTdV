@@ -18,8 +18,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="manifest" href="./manifest.json">
-    <link rel="icon" href="./img/favicon.ico" sizes="48x48">
+    <link rel="icon" href="./img/favicon.ico" sizes="16x16">
     <title>Radio Tiempo de Vida</title>
+    <style>
+        /* Estilo base: ocultar ambos botones */
+        .desktop-only,
+        .mobile-only {
+            display: none;
+        }
+
+        /* Mostrar botón1 solo en escritorio */
+        @media (min-width: 1024px) {
+            .desktop-only {
+                display: inline-block; /* Cambiar a block si necesitas que ocupe toda la línea */
+            }
+        }
+
+        /* Mostrar botón2 solo en móvil */
+        @media (max-width: 1023px) {
+            .mobile-only {
+                display: inline-block;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -33,7 +54,7 @@
     <h2>TIEMPO DE VIDA</h2>
 
     <article>
-        <div class="rep">
+        <div class="desktop-only">
             <script type="text/javascript" src="https://appnube.com.ar/mrp/mrp.js"></script>
             <script type="text/javascript">
             MRP.insert({
@@ -54,6 +75,37 @@
             </script>
         </div>
 
+        <audio src="https://server4.hostradios.com/8162/stream" id="player"></audio>
+        
+        <div class="mobile-only">
+            <a href="#" id="play">
+                <span><img src="img/Btn-Play.png"></span>
+            </a>
+            <a href="#" id="pause">
+                <span><img src="img/Btn-Pausa.png"></span>
+            </a>
+            <span id="loading">
+                <svg width="51px" height="50px" viewBox="0 0 51 50">
+    
+                    <rect y="0" width="13" height="50" fill="#1fa2ff">
+                        <animate attributeName="height" values="50;10;50" begin="0s" dur="1s" repeatCount="indefinite" />
+                        <animate attributeName="y" values="0;20;0" begin="0s" dur="1s" repeatCount="indefinite" />
+                    </rect>
+                
+                    <rect x="19" y="0" width="13" height="50" fill="#12d8fa">
+                        <animate attributeName="height" values="50;10;50" begin="0.2s" dur="1s" repeatCount="indefinite" />
+                        <animate attributeName="y" values="0;20;0" begin="0.2s" dur="1s" repeatCount="indefinite" />
+                    </rect>
+                
+                    <rect x="38" y="0" width="13" height="50" fill="#06ffcb">
+                        <animate attributeName="height" values="50;10;50" begin="0.4s" dur="1s" repeatCount="indefinite" />
+                        <animate attributeName="y" values="0;20;0" begin="0.4s" dur="1s" repeatCount="indefinite" />
+                    </rect>
+                
+                </svg>
+            </span>
+
+        </div>
     </article>
 
     <h3>Ministerio Nuevo Amanecer</h3>
